@@ -3,7 +3,7 @@ import ReconnectingWebSocket from 'reconnectingwebsocket';
 let ws;
 
 function url(username, password) {
-  return `wss://click.armada.nu/ws?username=${username}&password=${password}`;
+  return `wss://starling.armada.nu/ws?username=${username}&password=${password}`;
 }
 
 export function connect(success, error) {
