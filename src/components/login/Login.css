@@ -5,11 +5,16 @@
   align-items: center;
   justify-content: center;
   background-color: white;
+  padding: 0em 10vw;
 }
 
 .login, input, button {
-  font-size: 25px;
+  font-size: 1em;
   font-weight: 200;
+}
+
+.login-info {
+  font-size: 0.6em;
 }
 
 h1 {
@@ -21,6 +26,7 @@ input {
   display: block;
   border: none;
   background-color: transparent;
+  margin: 0.5em 0px;
 }
 
 textarea:focus, input:focus{
@@ -38,5 +44,18 @@ button {
 .login-button {
   fill: none;
   stroke: black;
+}
+
+.error-bar {
+  min-height: 50px;
+  z-index: 99999;
+  background-color: #e73953;
+  padding: 0.8em;
+}
+
+.error-bar > p {
+  color: #fff;
+  margin: 0 auto;
+  font-weight: 300;
 }
 

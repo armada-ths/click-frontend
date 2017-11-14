@@ -13,7 +13,8 @@ class Login extends Component {
 
     this.state = {
       username: '',
-      password: ''
+      password: '',
+      passwordError: false
     }
   }
 
@@ -32,14 +33,17 @@ class Login extends Component {
       browserHistory.push('/');
     }, () => {
       console.log('Error opening websocket');
+      this.setState({passwordError: true})
     });
   }
 
   render() {
     return (
       <div className="login">
-        <div>
+        <div> 
             <h1>click</h1>
+            {this.state.passwordError ? (<div className="error-bar"><p>Wrong Username or Password</p></div>) : 
+            (<p class="login-info">Get your login info from your Team Leader</p>)}
             <input placeholder="User" value={this.state.username} onChange={this.handleUserChange} />
             <input placeholder="Pass" value={this.state.password} onChange={this.handlePassChange} type="password" />
 
